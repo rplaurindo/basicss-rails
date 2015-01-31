@@ -1,0 +1,100 @@
+@import variables
+
+
+@mixin inset-box-shadow($color)
+  box-shadow: 0px 2px 1px -1px $color inset
+
+
+@mixin link-button
+  +inline-block
+  text-align: center
+
+  &:last-child
+    margin-right: 0
+
+  &.add
+    &:before
+      content: "+ "
+
+  &.remove
+    &:before
+      content: "- "
+
+
+@mixin linear-gradient($initial-color, $final-color, $percentage: null)
+  @if ($percentage)
+    background-image: linear-gradient(to bottom, $initial-color $percentage, $final-color 100%)
+  @else
+    background-image: linear-gradient(to bottom, $initial-color, $final-color)
+
+
+@mixin button
+  padding: 7px 15px
+
+  &:last-child
+    margin-bottom: 0
+
+
+@mixin inline-block
+  display: inline-block
+  vertical-align: top
+  margin-right: -3px
+
+
+@mixin dft-margin-bottom-form-objects($value)
+  input[type="text"], input[type="tel"], input[type="file"], input[type="email"], input[type="number"], select, textarea
+    margin-bottom: $value
+
+
+@mixin stretch-to-footer
+  position: absolute
+  bottom: 0
+
+
+@mixin textbox
+  border-radius: 2px
+  border: 1px solid #bbb
+  color: #222
+  background: #fff
+
+
+@mixin dl-with-inline-elements
+
+  dt, dd
+    +inline-block
+
+  &:last-of-type
+    div
+      &:last-child
+        margin-bottom: 0
+
+
+@mixin dft-padding-bottom($value)
+  padding-bottom: $value
+
+
+@mixin resolution($x, $y)
+  width: $x
+  height: $y
+
+
+@mixin sprite-icon-position($x, $y)
+  background:
+    position: $x $y
+
+
+@mixin sprite-icon($image, $width, $height)
+  display: inline-block
+  vertical-align: middle
+  width: $width
+  height: $height
+
+  background:
+    image: asset-url($image, image)
+    repeat: no-repeat
+
+
+@mixin text-overflow($type)
+  white-space: nowrap
+  overflow-x: hidden
+  text-overflow: $type

@@ -1,0 +1,1 @@
+require 'basicss/rails/engine'

@@ -1,0 +1,55 @@
+@import mixins
+
+.transparent
+  //o !important é para prevalecer sobre o atributo style
+  opacity: 0 !important
+  transition: opacity 1.8s
+
+.opacity-transition
+  transition: opacity 2.3s
+
+.inline-block
+  +inline-block
+
+.default-padding
+  padding: 25px
+
+.full-width
+  width: 100%
+
+.hidden
+  display: none
+
+.side-by-side
+  +inline-block
+  position: relative
+  vertical-align: top
+
+.fixed
+  position: fixed
+
+.truncated-text
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+  display: block
+
+.float-left
+  float: left
+  position: relative
+
+.uppercase
+  text-transform: uppercase
+
+.capitalized
+  text-transform: capitalize
+
+.float-right
+  float: right
+  position: relative
+
+.minimal-font
+  font-size: 9px
+
+.bold
+  font-weight: bold

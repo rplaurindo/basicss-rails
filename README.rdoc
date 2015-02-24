@@ -1,3 +1,3 @@
-= sass_pre-rails
+= basicss-rails
 
 This project rocks and uses MIT-LICENSE.

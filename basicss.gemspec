@@ -10,15 +10,14 @@ Gem::Specification.new do |s|
   s.homepage    = "https://rubygems.org/gems/basicss-rails"
   s.license     = "MIT"
   s.summary     = %q{Summary of Do}
-  s.description = %q{It's a lib that abstracts some methods to facilitate the use of Javascript and complementary the jQuery.}
+  s.description = %q{It's a lib written in sass that defines standard propridades to the basic structure of HTML, and facilitates the use of sass providing mixins.}
 
   BASICSS_REQUIREMENTS = {
-    :"sass-rails" => '>= 0'
+    :"sass-rails" => '>= 3.0.0'
   }
 
   BASICSS_REQUIREMENTS.each do |p, v|
     s.add_runtime_dependency p, v
-
   end
 
 end

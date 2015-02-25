@@ -4,6 +4,7 @@
 *
   margin: 0
   padding: 0
+  overflow: hidden
 
 
 div
@@ -13,8 +14,6 @@ div
 img
   // alinhamento vertical em relação ao objeto ao lado
   vertical-align: middle
-
-// colocar no media query o tamanho do body de acordo com as resoluções das telas
 
 body
   position: absolute
@@ -34,20 +33,9 @@ body
     main
       height: 87.2%
 
+  // O header não tem um width definido. Isso traz o problema de ao ser acionada a scrollbar no eixo x da página, parte de seu conteúdo se perde. Talvez seja interessante usar media queries para resolver este problema.
   header
     position: relative
-
-    // O header não tem um width definido. Isso traz o problema de ao ser acionada a scrollbar no eixo x da página, parte de seu conteúdo se perde. Talvez seja interessante usar media queries para resolver este problema.
-      height: $header-height
-
-  nav
-    &.horizontal
-      ul
-        border-bottom: 1px solid #e0e0e0
-        background: #f6f6f6
-        padding-bottom: 5px
-        box-shadow: inset #999999 0px 2px 2px
-        border-top: 3px solid #c5cad7
 
   main
     position: relative
@@ -59,7 +47,9 @@ body
     section
       &.non-centralized
         height: 100%
-        overflow-x: hidden
+
+      #container
+        margin: auto
 
     aside.right
       direction: ltr

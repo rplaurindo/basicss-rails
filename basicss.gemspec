@@ -8,9 +8,13 @@ Gem::Specification.new do |s|
   s.authors     = ["Rafael Laurindo"]
   s.email       = ["rafaelplaurindo@gmail.com"]
   s.homepage    = "https://rubygems.org/gems/basicss-rails"
-  s.license     = "MIT"
   s.summary     = %q{Summary of Do}
   s.description = %q{It's a lib written in sass that defines standard propridades to the basic structure of HTML, and facilitates the use of sass providing mixins.}
+  s.license     = "MIT"
+
+  s.files         = `git ls-files -z`.split("\x0")
+  s.executables   = s.files.grep(%r{^bin/}) { |f| File.basename(f) }
+  s.require_paths = ["lib"]
 
   BASICSS_REQUIREMENTS = {
     :"sass-rails" => '>= 3.0.0'

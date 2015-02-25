@@ -2,7 +2,7 @@ module Basicss
   module Rails
 
     class Engine < ::Rails::Engine
-      isolate_namespace Basicss::Rails
+      isolate_namespace Basicss
 
       config.before_initialize do
         # << faz push no array paths com uma string informada

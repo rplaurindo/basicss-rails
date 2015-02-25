@@ -1,0 +1,42 @@
+@import mixins
+
+
+button,
+input[type="submit"],
+a.button
+
+  +button
+
+  &.with-shadow
+    box-shadow: 1px 1px 1px #000
+
+  &.with-inset-shadow
+    box-shadow: inset 1px 1px 1px #000
+
+  &.with-border-radius
+    border-radius: 3px
+
+  &.with-border
+    &:active
+      box-shadow: initial
+
+
+  &.clean
+    background-color: #F6F7F8
+    color: #666
+
+    border: 1px #999 solid
+
+    &:hover
+      border: 1px solid #777
+
+    &:active
+      box-shadow: inset 1px 1px 1px #ccc
+
+
+a.button
+  +link-button
+
+button,
+input[type="submit"]
+  cursor: pointer

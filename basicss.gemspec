@@ -12,10 +12,6 @@ Gem::Specification.new do |s|
   s.description = %q{It's a lib written in sass that defines standard propridades to the basic structure of HTML, and facilitates the use of sass providing mixins.}
   s.license     = "MIT"
 
-  s.files         = `git ls-files -z`.split("\x0")
-  s.executables   = s.files.grep(%r{^bin/}) { |f| File.basename(f) }
-  s.require_paths = ["lib"]
-
-  s.add_runtime_dependency 'sass-rails', '~> 3.0', '>= 3.0.0'
+  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
 
 end

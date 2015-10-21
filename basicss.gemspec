@@ -11,7 +11,8 @@ Gem::Specification.new do |s|
   s.summary     = %q{Summary of Do}
   s.description = %q{It's a lib written in sass that defines standard propridades to the basic structure of HTML, and facilitates the use of sass providing mixins.}
   s.license     = "MIT"
+  s.test_files = Dir["test/**/*"]
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{bin,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc", "basicss.gemspec"]
 
 end

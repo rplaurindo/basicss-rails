@@ -5,7 +5,7 @@ require "basicss/rails/version"
 Gem::Specification.new do |s|
   s.name        = "basicss-rails"
   s.version     = Basicss::Rails::VERSION
-  s.authors     = ["Rafael Laurindo"]
+  s.authors     = ["rplaurindo"]
   s.email       = ["rafaelplaurindo@gmail.com"]
   s.homepage    = "https://rubygems.org/gems/basicss-rails"
   s.summary     = %q{Summary of Do}

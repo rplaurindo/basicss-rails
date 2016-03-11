@@ -38,24 +38,15 @@
   padding: 7px 15px
 
   &:last-child
-    margin-bottom: 0
+    margin: 0 0 0 20px
 
-
-@mixin dft-margin-bottom-form-objects($value)
-  input[type="text"], input[type="tel"], input[type="file"], input[type="email"], input[type="number"], select, textarea
-    margin-bottom: $value
+    &.right
+      margin: 0 20px 0 0
 
 
 @mixin stretch-to-footer
   position: absolute
   bottom: 0
-
-
-@mixin textbox
-  border-radius: 2px
-  border: 1px solid #bbb
-  color: #222
-  background: #fff
 
 
 @mixin dl-with-inline-elements
@@ -67,15 +58,6 @@
     div
       &:last-child
         margin-bottom: 0
-
-
-@mixin dft-padding-bottom($value)
-  padding-bottom: $value
-
-
-@mixin resolution($x, $y)
-  width: $x
-  height: $y
 
 
 @mixin sprite-icon-position($x, $y)

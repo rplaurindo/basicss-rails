@@ -11,20 +11,6 @@ img
   vertical-align: middle
 
 body
-  overflow: hidden
-
-  &.clean-layout
-    main
-      height: 100%
-
-  &.default-layout
-    main
-      //talvez possa colocar uma lógica aqui. Quando main tiver uma tag irmã "horizontalbar" o height do main será...
-      //height: 87.2%
-
-  &.default-layout-with-horizontal-menu
-    main
-      height: 87.2%
 
   // O header não tem um width definido. Isso traz o problema de ao ser acionada a scrollbar no eixo x da página, parte de seu conteúdo se perde. Talvez seja interessante usar media queries para resolver este problema.
   header
@@ -32,24 +18,20 @@ body
 
   main
     position: relative
+    margin: auto
 
     aside
-      text-align: center
       position: absolute
-      top: 0
+
+      &.right
+        direction: ltr
+        text-align: right
 
     section
       position: absolute
+      background-color: inherit
       right: 0
-      top: 0
+      height: inherit
 
       &.non-centralized
         height: 100%
-
-      #container
-        margin: auto
-
-    aside.right
-      direction: ltr
-      text-align: right
-      top: 0

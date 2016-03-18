@@ -21,16 +21,19 @@ body
     margin: auto
 
     aside
-      position: absolute
+      float: left
 
       &.right
         direction: ltr
         text-align: right
 
     section
-      position: absolute
-      background-color: inherit
-      height: inherit
+      position: relative
+      float: right
+
+      #container
+        height: 100%
+        position: relative
 
       &.non-centralized
         height: 100%

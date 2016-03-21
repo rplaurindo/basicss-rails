@@ -1,19 +1,16 @@
-@import variables, mixins
+@import mixins
 
 
 table
-  width: 100%
   border-collapse: collapse
+  margin: 0
+  text-align: center
 
-  table
-    margin: 0
-    margin-left: -1px
-    width: 100.2%
+  th, td
+    padding-bottom: 10px
 
   thead
-    text-align: center
-
-  tbody
-    td
-      &.actions
-        text-align: right
+    tr
+      th
+        padding-left: 25px
+        padding-right: 25px

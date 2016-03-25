@@ -1,19 +1,18 @@
 @import mixins
 
-
 *
   margin: 0
   padding: 0
 
-a
-  +inline-block
-
-img
-  // alinhamento vertical em relação ao objeto ao lado
-  vertical-align: middle
-
 body
   text-align: center
+
+  a
+    +inline-block
+
+  img
+    vertical-align: middle
+
 
   // O header não tem um width definido. Isso traz o problema de ao ser acionada a scrollbar no eixo x da página, parte de seu conteúdo se perde. Talvez seja interessante usar media queries para resolver este problema.
   header
@@ -27,16 +26,9 @@ body
     aside
       float: left
 
-      &.right
-        direction: ltr
-        text-align: right
-
     section
       position: relative
 
       #container
         height: 100%
         position: relative
-
-      &.non-centralized
-        height: 100%

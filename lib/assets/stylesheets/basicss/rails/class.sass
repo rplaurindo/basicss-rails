@@ -1,54 +1,22 @@
 @import mixins
 
-.basicss-transparent
-  opacity: 0 !important
-  transition: opacity 1.3s
+.basicss
+  &.transparent
+    opacity: 0 !important
+    transition: opacity 1.3s
 
-.basicss-opacity-transition
-  transition: opacity 2.3s
+  &.opacity-transition
+    transition: opacity 2.3s
 
-.basicss-inline
-  +inline
+  &.inline
+    +inline
 
-.basicss-default-padding
-  padding: 25px
+  &.hidden
+    display: none
 
-.basicss-full-width
-  width: 100%
+  &.fixed
+    position: fixed
 
-.basicss-hidden
-  display: none
-
-.basicss-side-by-side
-  +inline
-  position: relative
-  vertical-align: top
-
-.basicss-fixed
-  position: fixed
-
-.basicss-truncated-text
-  white-space: nowrap
-  overflow: hidden
-  text-overflow: ellipsis
-  display: block
-
-.basicss-float-left
-  float: left
-  position: relative
-
-.basicss-uppercase
-  text-transform: uppercase
-
-.basicss-capitalized
-  text-transform: capitalize
-
-.basicss-float-right
-  float: right
-  position: relative
-
-.basicss-minimal-font
-  font-size: 9px
-
-.basicss-bold
-  font-weight: bold
+  &.truncated-text
+    +text-overflow(ellipsis)
+    display: block

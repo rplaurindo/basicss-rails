@@ -4,21 +4,24 @@
 ul
   &.basicss
 
-    &.menu,
-    &.sub-menu
-      list-style-type: none
-
     li
       text-align: center
       position: relative
+
+      a
+        display: block
 
       &:hover
         cursor: default
 
         // first child only
+        //o ul nÃo pode ter overflow-x pois suprimirá os uls filhos
         > ul
           display: block
 
+    &.menu,
+    &.sub-menu
+      list-style-type: none
 
     &.menu
       &.horizontal
@@ -26,52 +29,16 @@ ul
           +inline
           margin-left: -5px
 
-        li
-          &:first-child
+          &:first-of-type
             margin-left: initial
 
     &.sub-menu
       display: none
       position: absolute
       z-index: 1
-      width: inherit
 
       &.vertical
-        //width: $basicss-vertical-menu-main-width
         li
-          a
-            display: block
-            padding-left: 10px
-            padding-top: 5px
-            padding-bottom: 5px
-            color: #eee
-
-            &:hover
-              color: #5b7dbc
-
           ul
-
-            //o ul nÃo pode ter overflow-x pois suprimirá os uls filhos
-
-            position: absolute
-            display: none
-            z-index: 1
-            //width: $basicss-vertical-menu-main-width
-            top: 1px
-
-            li
-              margin: initial
-              padding-right: 20px
-
-              color: #eee
-              background: #5b7dbc
-
-              &:hover
-                background: #eee
-                color: #5b7dbc
-
-              p, a
-                +text-overflow(ellipsis)
-
-              &:last-of-type
-                border-radius: 0 0 5px 5px
+            &.sub-menu
+              top: -1px

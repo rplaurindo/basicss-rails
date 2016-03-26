@@ -4,26 +4,27 @@
 ul
   &.basicss
 
-    li
-      text-align: center
-      position: relative
-
-      a
-        display: block
-
-      &:hover
-        cursor: default
-
-        // first child only
-        //o ul nÃo pode ter overflow-x pois suprimirá os uls filhos
-        > ul
-          display: block
-
     &.menu,
     &.sub-menu
       list-style-type: none
 
     &.menu
+
+      li
+        text-align: center
+        position: relative
+
+        a
+          display: block
+
+        &:hover
+          cursor: default
+
+          // first child only
+          //o ul nÃo pode ter overflow-x pois suprimirá os uls filhos
+          > ul
+            display: block
+
       &.horizontal
         > li
           +inline

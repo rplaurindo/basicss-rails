@@ -6,7 +6,9 @@ ul
 
     &.menu,
     &.sub-menu
-      list-style-type: none
+
+      ul
+        list-style-type: none
 
     &.menu
 
@@ -23,7 +25,7 @@ ul
           // first child only
           //o ul nÃo pode ter overflow-x pois suprimirá os uls filhos
           > ul
-            display: block
+            display: block !important
 
       &.horizontal
         > li
@@ -32,12 +34,14 @@ ul
           &:first-of-type
             margin-left: initial !important
 
-    &.sub-menu
-      display: none
-      position: absolute
-      z-index: 1
-
-      li
         ul
-          &.sub-menu
-            top: 0px
+          &.sub-menu,
+          ul
+
+            display: none
+            position: absolute
+            z-index: 1
+
+            li
+              ul
+                top: 0px

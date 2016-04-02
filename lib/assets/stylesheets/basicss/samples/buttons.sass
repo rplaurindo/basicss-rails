@@ -1,39 +1,87 @@
 @import ../mixins
 
-button,
-input[type="submit"]
-  +button
 
-button,
-input[type="submit"],
-a.button
+body
+  main
 
-  &.with-shadow
-    box-shadow: 1px 1px 1px #000
+    button,
+    a.button,
+    input[type="submit"]
+      +button
 
-  &.with-border-radius
-    border-radius: 3px
+      font-weight: bold
 
-  &.with-border
-    &:active
-      box-shadow: initial
+      &.with-border-radius
+        border-radius: 3px
 
+      &.with-border
+        &:active
+          box-shadow: initial
 
-  &.clean
-    background-color: #F6F7F8
-    color: #666
+      &.clean
+        background-color: #F6F7F8
+        color: #666
 
-    border: 1px #999 solid
+        border: 1px #999 solid
 
-    &.with-inset-shadow
-      box-shadow: inset 1px 1px 1px #000
+        &:hover
+          border: 1px solid #777
 
-    &:hover
-      border: 1px solid #777
+        &.with-shadow
+          +inset-box-shadow(#000)
 
-    &:active
-      box-shadow: inset 1px 1px 1px #ccc
+        &:active
+          +inset-box-shadow(#ccc)
 
+    input[type="submit"]
+      &.color
+        color: white
+        background: #2180CE
 
-a.button
-  +link-button
+        &.gradient
+          +linear-gradient(#33A0E8, #2180CE)
+
+          &:hover
+            +linear-gradient(#2180CE, #33A0E8)
+
+          &:active
+            background: #2180CE
+            border: none
+
+        &:hover
+          background: #33A0E8
+
+        &:active
+          background: #2180CE
+          border: none
+
+        &.with-border
+          border: 1px solid
+          border-top-color: #2270AB
+          border-right-color: #18639A
+          border-bottom-color: #0F568B
+          border-left-color: #18639A
+
+        &.with-text-shadow
+          text-shadow: 0 1px 2px #355782
+
+    button,
+    a.button,
+
+      &.green,
+      &.new
+        &.color
+          +green
+
+      &.red,
+      &.remove
+        &.color
+          +red
+
+      &.new,
+      &.remove
+        vertical-align: sub
+        padding: 5px 9px
+
+    a.button
+      +link-button

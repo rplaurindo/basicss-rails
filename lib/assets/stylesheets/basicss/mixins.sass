@@ -1,8 +1,69 @@
 @mixin inline
   display: inline-block
 
+
+@mixin green
+  color: white
+  background: #6abd3c
+
+  &.gradient
+    +linear-gradient(#9fd870, #6abd3c)
+
+    &:hover
+      +linear-gradient(#6abd3c, #9fd870)
+
+    &:active
+      background: #6abd3d
+
+  &:hover
+    +linear-gradient(#9fd870, #6abd3c)
+
+  &:active
+    background: #9fd870
+
+  &.with-border
+    border: 1px solid
+    border-color: #6abd3d
+    border-bottom-color: #5ca335
+
+  &.with-text-shadow
+    text-shadow: 1px 1px 2px #355782
+
+
+@mixin red
+  color: white
+  background: #d82005
+
+  &.gradient
+    +linear-gradient(#FC7C69, #d82005)
+
+    &:hover
+      +linear-gradient(#d82005, #FC7C69)
+
+    &:active
+      background: #d82005
+
+  &:hover
+    background: #F92506
+
+  &:active
+    background: #d82005
+
+  &.with-border
+    border: 1px solid
+    border-color: #c71e04
+    border-top-color: #d82005
+    border-bottom: #b71b04
+
+  &.with-text-shadow
+    text-shadow: 1px 1px 1px #525252
+
+
 @mixin inset-box-shadow($color)
   box-shadow: 0px 1px 1px 1px $color inset
+
+  &.clean
+    box-shadow: 0px 1px 2px -2px $color inset
 
 
 @mixin link-button
@@ -10,17 +71,13 @@
   text-align: center
   text-decoration: none
 
-  &:last-child
-    margin-right: 0
-
-  &.add
+  &.new
     &:before
       content: "+ "
 
   &.remove
     &:before
-      content: "- "
-
+      content: "× "
 
 @mixin linear-gradient($initial-color, $final-color, $percentage: null)
   @if ($percentage)

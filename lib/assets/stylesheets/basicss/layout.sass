@@ -1,8 +1,21 @@
+@import mixins
+
+
 body
   .basicss
 
-    &.notice
-      position: absolute
+    &.notice-wrapper
       text-align: center
       width: 100%
-      padding: 15px 0px
+
+      .notice
+        +inline
+        padding: 6px
+
+        a
+          &.close
+
+          &:after
+            +inline
+            content: "×"
+            font-weight: bold

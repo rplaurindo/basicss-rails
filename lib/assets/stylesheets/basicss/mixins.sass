@@ -78,8 +78,9 @@
     &:before
       content: "+ "
 
-  &.remove
-    &:before
+  &.remove,
+  &.close
+    &:after
       content: "× "
 
 @mixin linear-gradient($initial-color, $final-color, $percentage: null)

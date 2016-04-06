@@ -2,23 +2,36 @@
 
 
 body
-  .basicss
+  main
+    .basicss
 
-    &.notice-box-wrapper
-      text-align: center
-      width: 100%
-      position: absolute
+      &.notice-box-wrapper
+        text-align: center
+        width: 100%
+        position: absolute
 
-      .notice
-        +inline
-        padding: 6px
+        .notice
+          +inline
+          padding: 6px
 
-        a
-          &.close
+          a
+            &.close
 
-          &:after
-            +inline
-            content: "×"
-            font-weight: bold
-            position: relative
-            z-index: 1
+            &:after
+              +inline
+              content: "×"
+              font-weight: bold
+              position: relative
+              z-index: 1
+
+      .line,
+      &.line
+        margin-bottom: 20px
+
+      .indented,
+      &.indented
+        text-indent: 20px
+
+        .line
+          &:last-of-type
+            margin-bottom: 0

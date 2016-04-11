@@ -1,0 +1,70 @@
+@import mixins, variables
+
+
+ul
+  &.basicss
+
+    &.menu,
+    &.sub-menu
+
+      ul
+        list-style-type: none
+
+    &.menu
+
+      &.horizontal
+        display: inline-block
+
+        > li
+          +inline
+          margin-left: -3px
+
+          &:first-of-type
+            margin-left: initial !important
+
+          &.with-anchor
+            padding: initial !important
+
+      li
+        text-align: center
+        position: relative
+
+        &:hover
+          cursor: default
+
+          // first child only
+          //o ul nÃo pode ter overflow-x pois suprimirá os uls filhos
+          > ul
+            display: block !important
+
+        a
+          display: block
+
+        ul
+          &.sub-menu,
+          ul
+
+            display: none
+            position: absolute
+            z-index: 1
+
+            li
+              ul
+                top: 1px
+
+          &.sub-menu
+            li
+              ul
+                // if don’t set border-color, the assumed color will be of the color attribute
+                border-left: 1px solid transparent
+
+                li
+                  &:nth-of-type(2)
+                    border-top: 0 !important
+
+                  &:first-of-type
+                    border-top: initial !important
+                    background: transparent
+
+                    &:hover
+                      background: transparent !important

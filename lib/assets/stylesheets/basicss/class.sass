@@ -2,10 +2,12 @@
 
 *
   &.basicss
+    .transparent,
     &.transparent
       opacity: 0 !important
       transition: opacity 1.3s
 
+    .opacity-transition,
     &.opacity-transition
       transition: opacity 2.3s
 
@@ -13,12 +15,15 @@
     &.inline
       +inline
 
+    .hidden,
     &.hidden
       display: none
 
+    .fixed,
     &.fixed
       position: fixed
 
+    .truncated-text,
     &.truncated-text
       +text-overflow(ellipsis)
       display: block

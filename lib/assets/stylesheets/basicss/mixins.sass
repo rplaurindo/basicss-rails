@@ -1,3 +1,7 @@
+@mixin box-shadow($color, $x: 0px, $y: 0px, $size: 1px)
+  box-shadow: $x $y 6px $size $color
+
+
 @mixin inline
   display: inline-block
 
@@ -61,11 +65,6 @@
 
   &.with-text-shadow
     text-shadow: 1px 1px 1px #525252
-
-
-@mixin box-shadow($color, $x: 0px, $y: 0px)
-  box-shadow: $x $y 9px 1px $color
-
 
 
 @mixin inset-box-shadow($color)

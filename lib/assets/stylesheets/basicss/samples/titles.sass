@@ -1,0 +1,55 @@
+@import ../mixins
+
+*
+  &.basicss
+
+    .option,
+    .options,
+    &.option,
+    &.options
+
+      a
+        &.show,
+        &.edit,
+        &.delete,
+        &.stock
+
+          &:hover
+            &[title]
+              &:after
+                display: block !important
+
+          &[title]
+            &:after
+              +box-shadow(gray)
+              position: absolute
+              top: 130%
+              left: 65%
+              padding: 4px 9px
+              font-size: 0.81rem
+              z-index: 1
+              text-transform: capitalize
+              white-space: nowrap
+              display: none
+              opacity: 0.95
+
+
+        &.show
+          &[title]
+            &:after
+              content: "Mostrar dados"
+
+        &.edit
+          &[title]
+            &:after
+              content: "Atualizar dados"
+
+        &.delete
+          &[title]
+            &:after
+              content: "Excluir"
+
+        &.stock
+          &[title]
+            &:after
+              content: "Criar Estoque"

@@ -1,3 +1,7 @@
+@mixin base64-icon($hash)
+  background: url("data:image/svg+xml;utf8;base64," + $hash) no-repeat
+
+
 @mixin box-shadow($color, $x: 0px, $y: 0px, $size: 1px)
   box-shadow: $x $y 6px $size $color
 

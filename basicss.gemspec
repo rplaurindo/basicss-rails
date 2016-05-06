@@ -1,4 +1,4 @@
-Dir["./", "*/"].each{ |p| $:.unshift File.absolute_path(p) unless $:.include?(File.absolute_path(p)) }
+$:.push File.expand_path("../lib", __FILE__)
 
 require "basicss/rails/version"
 

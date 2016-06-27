@@ -10,7 +10,7 @@
   background: url("data:image/svg+xml;utf8;base64," + $hash) no-repeat
 
 
-@mixin box-shadow($color, $x: 0px, $y: 0px, $size: 1px)
+@mixin shadow($color, $x: 0px, $y: 0px, $size: -1px)
   box-shadow: $x $y 6px $size $color
 
 
@@ -20,30 +20,24 @@
 
 @mixin green
   color: white
-  background: #6abd3c
+  background: #70C000
 
   &.gradient
-    +linear-gradient(#9fd870, #6abd3c)
-
-    &:hover
-      +linear-gradient(#6abd3c, #9fd870)
-
-    &:active
-      background: #6abd3d
+    +linear-gradient(#6FD23F, #70C000)
 
   &:hover
-    +linear-gradient(#9fd870, #6abd3c)
+    background: #6FD23F
 
   &:active
-    background: #9fd870
+    background: #50B00F
 
   &.with-border
     border: 1px solid
     border-color: #6abd3d
     border-bottom-color: #5ca335
 
-  &.with-text-shadow
-    text-shadow: 1px 1px 2px #355782
+  &.text-with-shadow
+    +text-shadow(gray)
 
 
 @mixin red
@@ -75,7 +69,7 @@
     text-shadow: 1px 1px 1px #525252
 
 
-@mixin inset-box-shadow($color)
+@mixin inset-shadow($color)
   box-shadow: 0px 1px 1px 1px $color inset
 
   &.clean

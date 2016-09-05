@@ -1,3 +1,20 @@
+@mixin title
+  &[title]
+    &:after
+      position: absolute
+      top: 130%
+      left: 65%
+      z-index: 1
+      white-space: nowrap
+      display: none
+      text-transform: initial
+
+  &:hover
+    &[title]
+      &:after
+        display: block !important
+
+
 @mixin inline
   display: inline-block
 

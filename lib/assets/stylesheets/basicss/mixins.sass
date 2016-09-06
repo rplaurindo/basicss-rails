@@ -35,67 +35,6 @@
   text-shadow: 0px 1px 1px $color
 
 
-@mixin green
-  color: white
-  background: #70C000
-
-  &.gradient
-    +linear-gradient(#7FC23F, #70C000)
-
-  &:hover
-    background: #7FC23F
-
-  &:active
-    background: #50B00F
-
-  &.with-border
-    border: 1px solid
-    border-color: #6abd3d
-    border-bottom-color: #5ca335
-
-  &.text-with-shadow
-    +text-shadow(gray)
-
-
-@mixin red
-  color: white
-  background: #d82005
-
-  &.gradient
-    +linear-gradient(#FC7C69, #d82005)
-
-    &:hover
-      +linear-gradient(#d82005, #FC7C69)
-
-    &:active
-      background: #d82005
-
-  &:hover
-    background: #F92506
-
-  &:active
-    background: #d82005
-
-  &.with-border
-    border: 1px solid
-    border-color: #c71e04
-    border-top-color: #d82005
-    border-bottom: #b71b04
-
-  &.with-text-shadow
-    text-shadow: 1px 1px 1px #525252
-
-
-@mixin inset-shadow($color)
-  box-shadow: 0px 1px 1px 1px $color inset
-
-  &.clean
-    box-shadow: 0px 0px 2px -1px $color inset
-
-    &:active
-      box-shadow: 0px 0px 4px -1px $color inset
-
-
 @mixin link-button
   +inline
   text-align: center

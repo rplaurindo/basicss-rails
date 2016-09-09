@@ -34,8 +34,11 @@
   background: url("data:image/svg+xml;utf8;base64," + $hash) no-repeat
 
 
-@mixin shadow($color, $x: 0px, $y: 0px, $size: -1px)
-  box-shadow: $x $y 6px $size $color
+@mixin shadow($y: 0px, $x: 0px, $suavity: 7px, $size: -1px, $color: black, $style: inital)
+  @if $style == inset
+    box-shadow: $x $y $suavity $size $color $style
+  @else
+    box-shadow: $x $y $suavity $size $color
 
 
 @mixin text-shadow($color)

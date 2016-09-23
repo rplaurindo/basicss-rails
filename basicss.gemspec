@@ -13,6 +13,7 @@ Gem::Specification.new do |s|
   s.license     = "MIT"
   s.test_files = Dir["test/**/*"]
 
-  s.files = Dir["{bin,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc", "basicss.gemspec"]
+  s.files = Dir["{bin,config,lib,vendor}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc", "basicss.gemspec"]
+  s.require_paths = %w{lib vendor}
 
 end

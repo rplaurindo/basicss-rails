@@ -17,20 +17,20 @@ Gem::Specification.new do |s|
   s.require_paths = %w{lib vendor}
 
   # needs to work like "rake"
-  LAYOUTS_CORE_RUNTIME_DEPENDENCIES = {
+  BASICSS_RUNTIME_DEPENDENCIES = {
   }
 
   # needs to run a specific task
-  LAYOUTS_CORE_DEPENDENCIES = {
+  BASICSS_DEPENDENCIES = {
     "sass-rails": ">= 0"
   }
 
-  LAYOUTS_CORE_RUNTIME_DEPENDENCIES.each do |pkg, v|
-    spec.add_runtime_dependency pkg.to_s, v
+  BASICSS_RUNTIME_DEPENDENCIES.each do |pkg, v|
+    s.add_runtime_dependency pkg.to_s, v
   end
 
-  LAYOUTS_CORE_DEPENDENCIES.each do |pkg, v|
-    spec.add_development_dependency pkg.to_s, v
+  BASICSS_DEPENDENCIES.each do |pkg, v|
+    s.add_development_dependency pkg.to_s, v
   end
 
 end

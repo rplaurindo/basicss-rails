@@ -59,18 +59,6 @@
   position: absolute
   bottom: 0
 
-
-@mixin dl-with-inline-elements
-
-  dt, dd
-    +inline
-
-  &:last-of-type
-    div
-      &:last-child
-        margin-bottom: 0
-
-
 @mixin sprite-icon-position($x, $y)
   background:
     position: $x $y

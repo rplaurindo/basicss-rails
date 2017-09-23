@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
 
   # needs to run a specific task
   BASICSS_DEPENDENCIES = {
-    "sass-rails": ">= 0"
+    "sass-rails": "~> 5"
   }
 
   BASICSS_RUNTIME_DEPENDENCIES.each do |pkg, v|

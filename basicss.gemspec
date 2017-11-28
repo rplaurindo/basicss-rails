@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.test_files = Dir["test/**/*"]
 
   s.files = Dir["{bin,config,lib,vendor}/**/*", "MIT-LICENSE", "Rakefile", "README.md", "basicss.gemspec"]
-  s.require_paths = %w{lib vendor}
+  s.require_paths = %w{config lib vendor}
 
   # needs to work like "rake"
   BASICSS_RUNTIME_DEPENDENCIES = {
